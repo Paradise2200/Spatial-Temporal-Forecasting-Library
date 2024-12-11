@@ -21,7 +21,6 @@ device=torch.device('cuda'if torch.cuda.is_available() else 'cpu')
 #     def forward(self, x):
 #         return x[:, :, :x.shape[2] - self.chomp_size, :].contiguous()
 
-
 class STSelfAttention(nn.Module):
     def __init__(
         self, dim, s_attn_size, t_attn_size, geo_num_heads=4, sem_num_heads=2, t_num_heads=2, qkv_bias=False,
